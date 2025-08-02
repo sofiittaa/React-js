@@ -1,5 +1,3 @@
-import React from 'react'
-import App from '../App'
 import '../../css/App.css'
 
 export const ItemListContainer = ({ mensaje }) => {
