@@ -10,6 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/almendra": "^5.2.6",
+    "@fontsource/anton": "^5.2.6",
+    "@fontsource/fredoka-one": "^5.2.5",
+    "@fontsource/major-mono-display": "^5.2.6",
+    "@fontsource/monoton": "^5.2.6",
+    "@fontsource/orbitron": "^5.2.6",
+    "@fontsource/quicksand": "^5.2.8",
+    "@fontsource/source-code-pro": "^5.2.6",
     "lucide-react": "^0.536.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"

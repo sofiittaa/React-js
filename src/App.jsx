@@ -1,16 +1,24 @@
 import { Iframe } from "./Components/Iframe";
-import ItemListContainer from "./Components/ItemListContainer";
-import Navbar from "./Components/Navbar"
+import Foot from "./Components/Foot";
+import ItemDetailContainer from "./Components/ItemDetailContainer";
+import Navbar from "../src/Components/Navbar"
+import MiLinea from "../src/Components/MiLinea";
+/* ------------ FONTS -------------- */
+
+import '@fontsource/almendra';
+
+
 
 
 function App() {
-  /*   const nombre = prompt("Hola, Como te llamas?");
-    const mensaje = "Bienevindx " + nombre; */
+
   return (
     <>
       <Navbar />
-      {/* <ItemListContainer mensaje={mensaje} /> */}
       <Iframe />
+      <MiLinea titulo="Catalogo" />
+      <ItemDetailContainer />
+      <Foot />
     </>
   )
 }

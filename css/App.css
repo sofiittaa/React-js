@@ -1,59 +1,160 @@
+/* -------------------- HEADER -------------------- */
 .container {
-  margin-bottom: -150px;
-  margin-top: -415px;
-  background-color: rgb(30, 10, 24);
-  width: 1441px;
-  height: 100px;
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 0 40px;
-  z-index: 100;
+  width: 100%;
+  max-width: 1441px;
+  height: 100px;
+  background-color: rgb(58, 3, 42);
+  z-index: 10;
 
 }
 
 .logo {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: rgb(255, 255, 255);
+  color: white;
   font-size: 40px;
-  margin-left: -30px;
+}
 
+.links {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
 }
 
 .carrito {
   width: 45px;
 }
 
-.mensaje {
-  font-size: 25px;
-  font-family: 'Courier New', Courier, monospace;
-  text-align: center;
-  font-weight: 510;
-  color: rgb(255, 255, 255);
-  margin-top: -90px;
-  margin-left: 990px;
-
-}
-
-.links {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  margin-left: -300px;
-  font-size: 25px;
-  font-family: 'Courier New', Courier, monospace;
-  text-align: center;
-}
-
+/* -------------------- VIDEO -------------------- */
 .video {
-  width: 1382px;
+  width: 100%;
+  max-width: 1269px;
+  margin-left: -1px;
   height: 910px;
-  z-index: -1;
-  pad: 0 40px;
-  z-index: -100;
-  margin-top: 0;
-  transition-duration: 1000ms;
-  pointer-events: visibleFill;
   position: absolute;
-  transform: scale(1.2);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(1.2);
+  z-index: -1;
+  pointer-events: none;
+}
 
+/* -------------------- LINEAS -------------------- */
+
+
+.separador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 767px;
+  z-index: 0;
+
+}
+
+.linea {
+  border: 2px solid rgb(147, 3, 97);
+  width: 100%;
+  max-width: 1517px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+
+.linea2 {
+  border: 2px solid rgb(147, 3, 97);
+  width: 100%;
+  max-width: 1517px;
+  margin: 0 auto;
+  position: relative;
+  z-index: -3;
+}
+
+.titlee {
+  color: rgb(130, 6, 122);
+  font-family: ' Gill Sans', ' Gill Sans MT', Calibri, ' Trebuchet MS', ;
+  font: bolder;
+  font-size: 35px;
+  position: relative;
+  z-index: 3;
+}
+
+/* -------------------- CARDS -------------------- */
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: -105px;
+  position: relative;
+  z-index: 1;
+  background-color: rgb(255, 255, 255);
+
+}
+
+.card1 {
+  margin-top: 130px;
+  margin-bottom: -140px;
+  background-color: rgb(117, 4, 85);
+  width: 250px;
+  height: 500px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 5px solid rgb(90, 8, 66);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.797);
+
+
+}
+
+.card1:hover {
+  transform: scale(1.10);
+  transition: transform 0.3s ease-in-out;
+  background-color: rgb(133, 17, 100);
+  z-index: 2;
+}
+
+.img1 {
+  margin-top: 20px;
+  width: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.title {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-family: 'Almendra', serif;
+  font-style: normal;
+}
+
+
+
+.desc,
+.price {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', ;
+  font-style: normal;
+  margin-top: -5px;
+}
+
+/* -------------------- FOOTER -------------------- */
+.footer {
+  text-align: center;
+  background-color: rgb(117, 4, 104);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', ;
+  padding: 20px 0;
+  margin-top: 180px;
 }

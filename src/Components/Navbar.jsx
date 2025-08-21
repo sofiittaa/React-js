@@ -7,9 +7,9 @@ export const Navbar = () => {
         <nav>
             <div className='container'>
                 <h1 className='logo'>GamerZOne</h1>
-                <a className='links' href="">Home</a>
-                <a className='links' href="">Comprar</a>
-                <a className='links' href="">Contacto</a>
+                <a className='links' href=""></a>
+                <a className='links' href=""></a>
+                <a className='links' href=""></a>
                 <CartWidget />
             </div>
         </nav>
