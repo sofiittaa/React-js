@@ -4,91 +4,117 @@ export const productos = [
         "title": "Stardew Valley",
         "description": "Simulador de granja relajante donde cultivás, criás animales, pescás, minás y hacés amistades en un pueblo encantador.",
         "price": 399,
-        "imageUrl": "/public/stardeww.jpg"
+        "imageUrl": "/public/stardeww.jpg",
+        "genero": "Simulación",
+        "genero2": "Aventura"
     },
     {
         "id": 2,
         "title": "Subnautica",
         "description": "Juego de supervivencia bajo el mar en un planeta alienígena. Explorás, construís bases y tratás de no ser almuerzo de criaturas gigantes.",
         "price": 699,
-        "imageUrl": "/public/subnautica.png"
+        "imageUrl": "/public/subnautica.png",
+        "genero": "Supervivencia",
+        "genero2": "Aventura"
     },
     {
         "id": 3,
         "title": "GTA V",
         "description": ": Mundo abierto en Los Santos con tres protagonistas, misiones de crimen, persecuciones y el online más caótico de la historia.",
         "price": 999,
-        "imageUrl": "/public/Grand_Theft_Auto_V.png"
+        "imageUrl": "/public/Grand_Theft_Auto_V.png",
+        "genero": "Acción",
+        "genero2": "Aventura"
     },
     {
         "id": 4,
         "title": "Skyrim",
         "description": "RPG épico donde sos el “Dovahkiin”, con dragones, magia, facciones y un mundo abierto lleno de misiones secundarias eternas.",
         "price": 899,
-        "imageUrl": "/public/skyrim.jpg"
+        "imageUrl": "/public/skyrim.jpg",
+        "genero": "RPG",
+        "genero2": "Acción"
     },
     {
         "id": 5,
-        "title": "Silent Hill 2m",
+        "title": "Silent Hill 2",
         "description": "Survival horror psicológico clásico, donde James Sunderland explora el terrorífico pueblo de Silent Hill buscando a su esposa fallecida.",
         "price": 599,
-        "imageUrl": "/public/Silent_Hill_2_remake.jpg"
+        "imageUrl": "/public/Silent_Hill_2_remake.jpg",
+        "genero": "Survival Horror",
+        "genero2": "Psicológico"
     },
     {
         "id": 6,
         "title": "DayZ",
         "description": "Juego de supervivencia en mundo abierto con zombies y otros jugadores que probablemente quieran matarte más que los zombies.",
         "price": 799,
-        "imageUrl": "/public/Day_Z.jpg"
+        "imageUrl": "/public/Day_Z.jpg",
+        "genero": "Supervivencia",
+        "genero2": "Zombies"
     },
     {
         "id": 7,
         "title": "The Forest",
         "description": "Supervivencia en un bosque hostil tras un accidente aéreo. Debés construir, cazar y enfrentarte a caníbales mutantes.",
         "price": 699,
-        "imageUrl": "/public/the-forest.png"
+        "imageUrl": "/public/the-forest.png",
+        "genero": "Supervivencia",
+        "genero2": "Terror"
     },
     {
         "id": 8,
         "title": "Resident Evil 4 Remake",
         "description": ": Acción y survival horror donde Leon S. Kennedy debe rescatar a la hija del presidente en un pueblo plagado de infectados.",
         "price": 1399,
-        "imageUrl": "/public/resident_evil.png"
+        "imageUrl": "/public/resident_evil.png",
+        "genero": "Acción",
+        "genero2": "Zombies"
     },
     {
         "id": 9,
         "title": "Death Stranding",
         "description": "Aventura post-apocalíptica creada por Hideo Kojima, donde Norman Reedus (Sam Porter) conecta ciudades aisladas cargando paquetes en un mundo extraño y melancólico.",
         "price": 1199,
-        "imageUrl": "/public/death_strading.jpg"
+        "imageUrl": "/public/death_stranding.jpg",
+        "genero": "Aventura",
+        "genero2": "Acción"
     },
     {
         "id": 10,
         "title": "Grounded",
         "description": "Supervivencia en un jardín donde sos del tamaño de una hormiga. Explorás, construís refugios y peleás contra insectos gigantes.",
         "price": 499,
-        "imageUrl": "/public/Grounded}.jpg"
+        "imageUrl": "/public/Grounded.jpg",
+        "genero": "Supervivencia",
+        "genero2": "Aventura"
     },
     {
         "id": 11,
         "title": "Hello Neighbor",
         "description": "Juego de sigilo donde investigás la casa de tu vecino, que esconde secretos oscuros. La IA aprende de tus movimientos.",
         "price": 999,
-        "imageUrl": "/public/Hello_Neighbor.jpg"
+        "imageUrl": "/public/Hello_Neighbor.jpg",
+        "genero": "Sigilo",
+        "genero2": "Suspenso"
     },
     {
         "id": 12,
         "title": "Black Myth: Wukong",
         "description": "ARPG basado en “Viaje al Oeste”, con combates espectaculares, criaturas mitológicas chinas y gráficos impresionantes.",
         "price": 1399,
-        "imageUrl": "/public/Black_Myth_Wukong.jpg"
+        "imageUrl": "/public/Black_Myth_Wukong.jpg",
+        "genero": "ARPG",
+        "genero2": "Acción"
     },
     {
         "id": 13,
         "title": "Project Zomboid",
         "description": "Survival isométrico hardcore donde lo importante no es “si sobrevivís”, sino “cuánto sobrevivís” a la invasión zombie.",
         "price": 549,
-        "imageUrl": "/public/project_zomboid.jpg"
+        "imageUrl": "/public/project_zomboid.jpg",
+        "genero": "Supervivencia",
+        "genero2": "Zombies"
     },
     {
         "id": 14,
@@ -96,7 +122,8 @@ export const productos = [
         "description": "Rogue-like oscuro y retorcido donde explorás mazmorras aleatorias, conseguís ítems bizarros y te enfrentás a horrores salidos de pesadillas cartoon.",
         "price": 399,
         "imageUrl": "/public/tboi.jpg",
-        "genero": "Rogue-like / Acción"
+        "genero": "Rogue-like",
+        "genero2": "Acción"
     },
     {
         "id": 15,
@@ -104,7 +131,8 @@ export const productos = [
         "description": "Aventura indie donde sos un gatito callejero explorando una ciudad cyberpunk habitada por robots. Todo muy tierno pero melancólico.",
         "price": 799,
         "imageUrl": "/public/stray.jpg",
-        "genero": "Aventura / Exploración"
+        "genero": "Aventura ",
+        "genero2": "Exploración"
     },
     {
         "id": 16,
@@ -112,7 +140,8 @@ export const productos = [
         "description": "El sandbox más famoso: minas, picos, creepers y libertad total para construir lo que quieras. Ideal para perder años de tu vida felizmente.",
         "price": 699,
         "imageUrl": "/public/minecraft-java-mas-bedrock.jpg",
-        "genero": "Sandbox / Supervivencia"
+        "genero": "Supervivencia",
+        "genero2": "Sandbox"
     },
     {
         "id": 17,
@@ -120,7 +149,8 @@ export const productos = [
         "description": "Metroidvania bellísimo y desafiante, con un mundo oscuro de insectos, bosses épicos y música de otro nivel.",
         "price": 699,
         "imageUrl": "/public/Hollow_Knight_first.png",
-        "genero": "Metroidvania / Aventura"
+        "genero": "Metroidvania",
+        "genero2": "Aventura"
     },
     {
         "id": 18,
@@ -128,7 +158,8 @@ export const productos = [
         "description": "Juego de supervivencia nuclear: tenés 60 segundos para juntar recursos y luego sobrevivir en un refugio con tu familia… o no.",
         "price": 499,
         "imageUrl": "/public/60_seconds.jpg",
-        "genero": "Estrategia / Supervivencia"
+        "genero": "Estrategia",
+        "genero2": "Supervivencia"
     },
     {
         "id": 19,
@@ -136,7 +167,8 @@ export const productos = [
         "description": "Thriller interactivo en bucle temporal donde vivís la misma noche una y otra vez hasta resolver el misterio. Minimalista pero atrapante.",
         "price": 599,
         "imageUrl": "/public/Twelve_minutes.png",
-        "genero": "Aventura / Thriller"
+        "genero": "Thriller",
+        "genero2": "Aventura"
     },
     {
         "id": 20,

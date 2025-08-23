@@ -8,7 +8,7 @@
   width: 100%;
   max-width: 1441px;
   height: 100px;
-  background-color: rgb(58, 3, 42);
+  background: url('/public/fondoSweet2.jpg');
   z-index: 10;
 
 }
@@ -27,9 +27,47 @@
   text-align: center;
 }
 
-.carrito {
-  width: 45px;
+.mburger {
+
+  width: 35px;
 }
+
+.carrito {
+  margin-right: -100px;
+  margin-top: -5px;
+  width: 50px;
+}
+
+.cantidad {
+  position: absolute;
+  top: 30px;
+  margin-left: 55px;
+  background-color: rgb(109, 7, 92);
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.claro {
+  margin-right: -100px;
+  width: 40px;
+}
+
+.perfil {
+  margin-right: -700px;
+  width: 40px;
+}
+
+.boton{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+/* -------------------- MODO --------------------- */
+
 
 /* -------------------- VIDEO -------------------- */
 .video {
@@ -58,7 +96,7 @@
 }
 
 .linea {
-  border: 2px solid rgb(147, 3, 97);
+  border: 2px solid(88, 11, 66);
   width: 100%;
   max-width: 1517px;
   margin: 0 auto;
@@ -67,7 +105,7 @@
 }
 
 .linea2 {
-  border: 2px solid rgb(147, 3, 97);
+  border: 2px solid rgb(88, 11, 66);
   width: 100%;
   max-width: 1517px;
   margin: 0 auto;
@@ -76,14 +114,22 @@
 }
 
 .titlee {
-  color: rgb(130, 6, 122);
+  color: rgb(88, 11, 66);
   font-family: ' Gill Sans', ' Gill Sans MT', Calibri, ' Trebuchet MS', ;
   font: bolder;
   font-size: 35px;
   position: relative;
   z-index: 3;
 }
+/* ------------------ SWAL FIRE ------------------ */
+.text{
+  font-family: 'Cormorant Garamond', serif;
+  color: seashell;
+}
 
+.title{
+  color: #ffffff;
+}
 /* -------------------- CARDS -------------------- */
 .item-list {
   display: flex;
@@ -100,7 +146,7 @@
 .card1 {
   margin-top: 130px;
   margin-bottom: -140px;
-  background-color: rgb(117, 4, 85);
+  background: url('/public/fondoSweet.jpg');
   width: 250px;
   height: 500px;
   border-radius: 10px;
@@ -108,16 +154,16 @@
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  border: 5px solid rgb(90, 8, 66);
+  border: 5px solid(88, 11, 66);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.797);
 
 
 }
 
 .card1:hover {
-  transform: scale(1.10);
+  transform: scale(1.15);
   transition: transform 0.3s ease-in-out;
-  background-color: rgb(133, 17, 100);
+
   z-index: 2;
 }
 
@@ -132,7 +178,7 @@
   text-align: center;
   color: rgb(255, 255, 255);
   font-size: 25px;
-  font-family: 'Almendra', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-style: normal;
 }
 
@@ -143,7 +189,7 @@
   text-align: center;
   color: rgb(255, 255, 255);
   font-size: 17px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', ;
+  font-family: 'Quicksand', sans-serif;
   font-style: normal;
   margin-top: -5px;
 }
@@ -151,10 +197,11 @@
 /* -------------------- FOOTER -------------------- */
 .footer {
   text-align: center;
-  background-color: rgb(117, 4, 104);
+  background: url('/public/fondoSweet2.jpg');
   color: rgb(255, 255, 255);
   font-size: 20px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', ;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
   padding: 20px 0;
   margin-top: 180px;
 }
