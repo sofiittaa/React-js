@@ -1,8 +1,9 @@
 
 import CartWidget from './CartWidget';
 import '../../css/App.css';
-import { Mburger } from './Mburger';
-import { Perfil } from './Perfil';
+import  Mburger  from './Mburger';
+import  Perfil  from './Perfil';
+import IraHome from './IraHome';
 
 export const Navbar = () => {
 
@@ -13,9 +14,7 @@ export const Navbar = () => {
       <nav>
         <div className='container'>
           <h1 className='logo'>GamerZOne</h1>
-          <a className='links' href=""></a>
-          <a className='links' href=""></a>
-          <a className='links' href=""></a>
+          <IraHome/>
           <Perfil />
           <CartWidget />
           <Mburger />

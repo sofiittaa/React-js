@@ -1,10 +1,9 @@
-import React from 'react'
 import '../../css/App.css'
 
 
 export const Foot = () => {
     return (
-        <div>
+        <div >
             <footer className='footer'>Derechos reservados por GamerZOne 2023 ©</footer>
         </div>
     )

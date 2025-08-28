@@ -21,3 +21,4 @@ export const Iframe = () => {
 
     )
 }
+export default Iframe;

@@ -1,3 +1,4 @@
+
 /* -------------------- HEADER -------------------- */
 .container {
   position: relative;
@@ -10,7 +11,6 @@
   height: 100px;
   background: url('/public/fondoSweet2.jpg');
   z-index: 10;
-
 }
 
 .logo {
@@ -19,55 +19,38 @@
   font-size: 40px;
 }
 
-.links {
-  text-decoration: none;
-  color: white;
-  font-size: 25px;
-  font-family: 'Courier New', Courier, monospace;
-  text-align: center;
-}
-
 .mburger {
-
+  margin-right: 20px;
   width: 35px;
 }
 
 .carrito {
-  margin-right: -100px;
+  margin-left: 20px;
   margin-top: -5px;
   width: 50px;
 }
 
 .cantidad {
+  font-family: "Cormorant Garamond", serif;
   position: absolute;
-  top: 30px;
-  margin-left: 55px;
+  top: 20px;
+  margin-left: -5px;
   background-color: rgb(109, 7, 92);
   color: white;
   border-radius: 50%;
   padding: 5px 10px;
-  font-size: 12px;
-}
-
-.claro {
-  margin-right: -100px;
-  width: 40px;
+  font-size: 17px;
 }
 
 .perfil {
-  margin-right: -700px;
+  margin-left: -10px;
   width: 40px;
 }
 
-.boton{
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  transition: background-color 0.3s ease;
+.casa {
+  width: 40px;
+  margin-left: 700px;
 }
-/* -------------------- MODO --------------------- */
-
 
 /* -------------------- VIDEO -------------------- */
 .video {
@@ -79,56 +62,86 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%) scale(1.2);
-  z-index: -1;
+  z-index: -100;
   pointer-events: none;
 }
 
 /* -------------------- LINEAS -------------------- */
-
-
 .separador {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 767px;
-  z-index: 0;
-
-}
-
-.linea {
-  border: 2px solid(88, 11, 66);
-  width: 100%;
-  max-width: 1517px;
-  margin: 0 auto;
-  position: relative;
+  margin-top: 409px;
   z-index: 3;
-}
-
-.linea2 {
-  border: 2px solid rgb(88, 11, 66);
-  width: 100%;
-  max-width: 1517px;
-  margin: 0 auto;
-  position: relative;
-  z-index: -3;
-}
-
-.titlee {
   color: rgb(88, 11, 66);
-  font-family: ' Gill Sans', ' Gill Sans MT', Calibri, ' Trebuchet MS', ;
-  font: bolder;
+}
+
+.titlee1 {
+  color: rgb(88, 11, 66);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS';
+  font-weight: bolder;
   font-size: 35px;
   position: relative;
   z-index: 3;
-}
-/* ------------------ SWAL FIRE ------------------ */
-.text{
-  font-family: 'Cormorant Garamond', serif;
-  color: seashell;
+  margin-top: -290px;
 }
 
-.title{
+/* ------------------ SWAL FIRE ------------------ */
+.text {
+  font-family: 'Cormorant Garamond', serif;
+  color: seashell;
+  font-size: 40px;
+}
+
+.title {
   color: #ffffff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 60px;
+}
+/* ------------------- MUNDO GAMER -------------------- */
+.content{
+  display: flex;
+  flex-direction: column;
+  margin-top: 510px;
+  margin-left: 40px;
+}
+
+.desc2{
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    font-family: 'Quicksand', sans-serif;
+    margin-top: -40px;
+}
+
+.tit{
+  font-family: 'Cormorant Garamond', sans-serif;
+  color: seashell;
+  font-size: 60px;
+}
+
+/* ----------------- VER CATÁLOGO ---------------- */
+.btn-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttonC {
+  background-color: rgb(130, 4, 16);
+  border: none;
+  color: white;
+  padding: 20px 30px;
+  font-size: 25px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  position: relative;
+  z-index: 3;
+  margin-left: 1200px;
+  margin-top: -150px;
+}
+
+.buttonC:hover {
+  background-color: rgb(106, 5, 6);
+  transform: scale(1.10);
 }
 /* -------------------- CARDS -------------------- */
 .item-list {
@@ -136,11 +149,35 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
-  margin-top: -105px;
+  margin-top: -75px;
   position: relative;
   z-index: 1;
   background-color: rgb(255, 255, 255);
+}
+.item-list2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: -325px;
+  position: relative;
+  z-index: 1;
+  background-color: rgb(255, 255, 255);
+}
 
+.card2 {
+  margin-top: 130px;
+  margin-bottom: -140px;
+  background: url('/public/fondoSweet.jpg');
+  width: 250px;
+  height: 500px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 5px solid rgb(88, 11, 66);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.797);
 }
 
 .card1 {
@@ -154,16 +191,13 @@
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  border: 5px solid(88, 11, 66);
+  border: 5px solid rgb(88, 11, 66);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.797);
-
-
 }
 
 .card1:hover {
   transform: scale(1.15);
   transition: transform 0.3s ease-in-out;
-
   z-index: 2;
 }
 
@@ -179,10 +213,14 @@
   color: rgb(255, 255, 255);
   font-size: 25px;
   font-family: 'Cormorant Garamond', serif;
-  font-style: normal;
 }
-
-
+.titlee {
+  margin-top: 200px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-family: 'Cormorant Garamond', serif;
+}
 
 .desc,
 .price {
@@ -190,8 +228,19 @@
   color: rgb(255, 255, 255);
   font-size: 17px;
   font-family: 'Quicksand', sans-serif;
-  font-style: normal;
   margin-top: -5px;
+}
+
+/* --------------- INPUTS REGISTER -----------------*/
+.swal2-input {
+  width: 280px;
+  text-align: center;
+
+  display: flex;
+  margin: 5px 50px;
+  font-size: 25px;
+  border: 3px solid rgb(70, 3, 51);
+  border-radius: 10px;
 }
 
 /* -------------------- FOOTER -------------------- */
@@ -203,5 +252,9 @@
   font-family: 'Quicksand', sans-serif;
   font-weight: 600;
   padding: 20px 0;
-  margin-top: 180px;
+  margin-top: 200px;
+  position: relative;
+  width: 1521px;
+  z-index: 1;
 }
+

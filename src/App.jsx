@@ -1,42 +1,34 @@
+/* ----------- COMPONENTS ----------- */
 import { Iframe } from "./Components/Iframe";
 import Foot from "./Components/Foot";
 import ItemDetailContainer from "./Components/ItemDetailContainer";
-import Navbar from "../src/Components/Navbar"
-import MiLinea from "../src/Components/MiLinea";
-import React, { useState } from 'react';
-import { Moon, Sun } from "lucide-react";
-import { BrowserRouter } from "react-router-dom";
-import { Routes } from "react-router-dom";
-import { Route } from "react-router-dom";
-import Swal from 'sweetalert2'
-
+import Navbar from "./Components/Navbar";
+import MiLinea from "./Components/MiLinea";
+import Casa from "./Components/Casa";
+import Bestplay from "./Components/Bestplay";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 /* ------------ FONTS -------------- */
-import "@fontsource/quicksand";  
+import "@fontsource/quicksand";
 import "@fontsource/cormorant-garamond";
 
-
 /* ------------- APP --------------- */
-
 function App() {
- /*  const [dark, setDark] = useState(true);
-
-  const toggle = () => setDark(!dark); */
   return (
-    <>  
-      <BrowserRouter>
-    {/*   <button className={`boton ${dark ? "btn-dark" : "btn-light"}`} onClick={toggle}>
-        {dark ? <Moon size={35} color="white" /> : <Sun size={35} color="white" />}
-      </button> */}
-      <Navbar />
-      <Iframe />
-      <MiLinea titulo="Catalogo" />
-      <ItemDetailContainer />
+    <BrowserRouter>
+      
+        <Navbar />
+      <Routes>
+        <Route path="/" element={<Navigate to="/home" />} />
+            <Route path="/home" element={<Casa />} />
+           <Route path="/" element={<Iframe />} />
+            <Route path="/" element={<Bestplay />} />
+            <Route path="/" element={<MiLinea titulo="Videojuegos populares" />} />
+            <Route path="/Catalogo" element={<ItemDetailContainer />} />
+          </Routes>
         <Foot />
-      </BrowserRouter>
-
-    </>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
