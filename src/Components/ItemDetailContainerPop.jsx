@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import ItemDetailPop from "./ItemDetailPop.jsx";
-import { productosPop } from "../productosPop.jsx";
+import productosPop from "../productosPop.js";
+
 
 
 function ItemDetailContainerPop() {

@@ -1,4 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 function ItemDetailPop({ item }) {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/vistaPrev/${item.id}`);
+    }
     return (
         <div className='flex'>
           
@@ -6,8 +13,7 @@ function ItemDetailPop({ item }) {
 
                 <img className="img1" src={item.imageUrl} />
                 <h2 className="title">{item.title}</h2>
-                <p className='desc'>{item.description}</p>
-                <p className='price'>Precio ${item.price}</p>
+                <button onClick={handleClick} className="btn-c">Detalle del producto</button>
             </div>
         </div>
 
