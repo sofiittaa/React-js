@@ -25,7 +25,7 @@ const Catalogoo = () => {
           <img src={j.imageUrl} alt={j.title} className="product-img2" />
           <h3>{j.title}</h3>
           <p className="product-description2">{j.description}</p>
-          <button onClick={handleClick} className="buy-btn2">Detalle del producto</button>
+          <button  onClick={() => handleClick(j)} className="buy-btn2">Detalle del producto</button>
         </div>
       ))}
     </div>
@@ -33,3 +33,4 @@ const Catalogoo = () => {
 };
 
 export default Catalogoo;
+
