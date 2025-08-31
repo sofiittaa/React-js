@@ -19,9 +19,9 @@ const Catalogoo = () => {
     : productos;
 
   return (
-    <div className="products-container2"> {/* contenedor flex */}
+    <div className="products-container2"> 
       {juegosFiltrados.map((j) => (
-        <div key={j.id} className="product-card2"> {/* cada tarjeta */}
+        <div key={j.id} className="product-card2"> 
           <img src={j.imageUrl} alt={j.title} className="product-img2" />
           <h3>{j.title}</h3>
           <p className="product-description2">{j.description}</p>
