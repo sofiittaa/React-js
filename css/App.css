@@ -37,7 +37,7 @@ body{
   position: absolute;
   top: 20px;
   margin-left: -5px;
-  background-color: rgb(109, 7, 92);
+  background-color: rgb(181, 7, 91);
   color: white;
   border-radius: 50%;
   padding: 5px 10px;
@@ -109,6 +109,7 @@ body{
   font-size: 20px;
   margin-bottom: 5px;
 }
+
 
 .tag-link{
   font-family: 'Cormorant Garamond', serif;
@@ -215,6 +216,8 @@ body{
   background-color: rgb(106, 5, 6);
   transform: scale(1.10);
 }
+
+/*  */
 /* -------------------- CARDS -------------------- */
 .item-list {
   display: flex;
@@ -323,13 +326,28 @@ body{
 .swal2-input {
   width: 280px;
   text-align: center;
-
+  font-family: 'Quicksand', sans-serif;
   display: flex;
   margin: 5px 50px;
   font-size: 25px;
-  border: 3px solid rgb(70, 3, 51);
+  border: 2px solid rgb(181, 7, 91);
   border-radius: 10px;
+
 }
+
+
+/* ---------------- LOADING --------------------------- */
+
+.loading {
+  text-align: center;
+  color: rgb(107, 0, 87);
+  font-size: 45px;
+  font-family: 'Cormorant Garamond', serif;
+  margin-top: 200px;
+}
+
+
+
 
 /* ------------------- VISTA DE PRODUCTO ----------------- */
 
@@ -421,6 +439,50 @@ body{
 
 .buy-btn:hover {
   transform: scale(1.1);
+}
+
+.btn-dec{
+  color: rgb(255, 255, 255);
+  background-color: rgb(181, 7, 91);
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  margin-right: -10px;
+}
+.btn-inc{
+  color: rgb(255, 255, 255);
+  background-color: rgb(181, 7, 91);
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-left: -10px;
+}
+.btn-inc:hover {
+  transform: scale(1.2);
+}
+.product-quantity{
+  font-family: 'Quicksand', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight:100;
+  position: relative;
+  z-index: 3;
+
+}
+
+.btn-dec:hover {
+  transform: scale(1.2);
 }
 
   /* --------------- CATEGORÍA --------------- */

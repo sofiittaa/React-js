@@ -1,40 +1,37 @@
 /* ----------- COMPONENTS ----------- */
-import  Iframe  from "./Components/Iframe";
-import Foot from "./Components/Foot";
-import ItemDetailContainer from "./Components/ItemDetailContainer";
-import Navbar from "./Components/Navbar";
-import MiLinea from "./Components/MiLinea";
-import Casa from "./Components/Casa";
-import Bestplay from "./Components/Bestplay";
-import ProductPage from "./Components/productPage";
-import Catalogoo from "./Components/Catalogoo";
+import '../css/App.css';
+
+import FooterContainer from "./Components/FooterContainer";
+import ItemListContainer from "./Components/ItemListContainer";
+import NavbarContainer from "./Components/NavbarContainer";
+import MiLineaContainer from "./Components/MiLineaContainer";
+import CatalogoContainer from "./Components/CatalogoContainer";
+import InicioContainer from "./Components/InicioContainer";
+import ItemDesc from "./Components/ItemDesc";
+import IframeContainer from "./Components/IframeContainer";
+import BestplayContainer from "./Components/BestplayContainer";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 /* ------------ FONTS -------------- */
 import "@fontsource/quicksand";
 import "@fontsource/cormorant-garamond";
-
-
-
-
 /* ------------- APP --------------- */
 function App() {
-
+ 
   return (
     <BrowserRouter>
-      
-        <Navbar />
+      <NavbarContainer/>
       <Routes>
         <Route path="/" element={<Navigate to="/home" />} />
-            <Route exact path="/home" element={<Casa />} />
-            <Route exact path="/" element={<Iframe />} />
-            <Route exact  path="/" element={<Bestplay />} />
-            <Route exact  path="/" element={<MiLinea titulo="Videojuegos populares" />} />
-            <Route exact path="/catalogo" element={<ItemDetailContainer />} />
-            <Route path="/catalogo/:tag" element={<Catalogoo />} />
-            <Route exact  path="/vistaPrev/:id" element={<ProductPage />} />
+            <Route exact path="/home" element={<InicioContainer />} />
+            <Route exact path="/" element={<IframeContainer />} />
+            <Route exact  path="/" element={<BestplayContainer />} />
+            <Route exact  path="/" element={<MiLineaContainer titulo="Videojuegos populares" />} />
+            <Route exact path="/catalogo" element={<ItemListContainer />} />
+            <Route path="/catalogo/:tag" element={<CatalogoContainer />} />
+            <Route exact  path="/vistaPrev/:id" element={<ItemDesc/>} />
       </Routes>
-      <Foot />
+      <FooterContainer />
     </BrowserRouter>
   );
 }

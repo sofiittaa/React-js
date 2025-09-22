@@ -1,7 +1,7 @@
 import { useNavigate, useLocation } from 'react-router-dom'
-export { MiLinea } from '../Components/MiLinea';
+export { MiLineaContainer } from './MiLineaContainer';
 
-const Catalogo = () => {
+const  CatalogoButtonContainer = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -12,4 +12,4 @@ const Catalogo = () => {
   )
 }
 
-export default Catalogo;
+export default CatalogoButtonContainer;

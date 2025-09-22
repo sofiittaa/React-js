@@ -1,4 +1,4 @@
-export const MiLinea = ({ titulo }) => {
+export const MiLineaContainer = ({ titulo }) => {
     return (
         <div className="separador">
             <h1 className='titlee1'>{titulo}</h1>
@@ -6,4 +6,4 @@ export const MiLinea = ({ titulo }) => {
     )
 }
 
-export default MiLinea
+export default MiLineaContainer;

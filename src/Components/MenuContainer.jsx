@@ -2,7 +2,7 @@ import { useState } from "react";
 import { tags } from "../tags"; 
 import { Link } from "react-router-dom";
 
-export const Mburger = () => {
+export const MenuContainer = () => {
   const [open, setOpen] = useState(false); 
 
   const [search, setSearch] = useState(""); 
@@ -24,6 +24,7 @@ export const Mburger = () => {
 
       {open && (
         <div className="menu-container">
+         
           <button onClick={handleClick} className="menu-close">X</button>
           <label className="menu-label"> Buscar 🔎
             <input type="text" placeholder="categoría..." value={search} onChange={(e) => setSearch(e.target.value)} className="menu-search" />
@@ -41,10 +42,11 @@ export const Mburger = () => {
               )}
             </ul>
           )}
+         
         </div>
       )}
     </>
   );
 };
 
-export default Mburger;
+export default MenuContainer;
