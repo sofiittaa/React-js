@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from 'firebase/firestore';
+import { getFirestore } from "firebase/firestore";
 
 
 
@@ -17,8 +17,6 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 
-//1) una referencia a la aplicacion/plataforma de firebase (es la constante app)
-//2)Una referencia a la base de datos de firebsae (Se hace con la funcion getFirestore de firebase)
-//3)La consulta
 
 export default firebaseConfig;
+

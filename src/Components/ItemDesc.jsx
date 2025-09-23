@@ -1,53 +1,49 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Swal from "sweetalert2";
+import { CartContext } from "./CartCustomProvider";
+import { ItemCount } from "./ItemCount"; 
 
-const ItemDesc= ({ item }) => {
-  const [cantidad, setCantidad] = useState(1);
+const ItemDesc = ({ item }) => {
+  const { AddItemToCart } = useContext(CartContext);
+  const [quantity, setQuantity] = useState(1);
 
-  const incrementar = () => setCantidad(c => c + 1);
-  const decrementar = () => setCantidad(c => (c > 1 ? c - 1 : 1));
-
-  const handleClick = () => {
+  const handleAddToCart = () => {
+    AddItemToCart({ ...item, quantity });
     Swal.fire({
-      title: `Añadiste ${cantidad} ${item.title}${cantidad > 1 ? 's' : ''} al carrito`,
+      title: `Añadiste ${quantity} ${item.title}${quantity > 1 ? 's' : ''} al carrito`,
       icon: "success",
-      showCancelButton: false,
       showConfirmButton: false,
-      timer: 4900,
+      timer: 2000,
       background: 'url(/fondoSweet.jpg)',
-      customClass: {
-        title: 'title',
-        text: 'text',
-      },
       backdrop: 'rgba(255, 118, 207, 0.17)',
     });
-    setCantidad(1);
+    setQuantity(1);
   };
-  if (!item) return <p className="loading">Producto no encontrado.</p>;
+
+  if (!item) return null;
 
   return (
     <section className="product-detail">
       <div className="flex">
         <div className="product-card">
-          {(item.imageUrl)} && (
-          <img src={item.imageUrl}  alt={item.title} className="product-img" />
-          )
+          {item.imageUrl && <img src={item.imageUrl} alt={item.title} className="product-img" />}
           <h1 className="product-title">{item.title}</h1>
         </div>
+
         <div className="product-info">
-          <p className="product-description">{item.description || item.descripcion || item.desc}</p>
+          <p className="product-description">{item.description}</p>
           {item.price && <strong className="product-price">${item.price}</strong>}
+
           <div>
-            <button className="btn-dec" onClick={decrementar}>-</button>
-            <span className="product-quantity">{cantidad}</span>
-            <button className="btn-inc" onClick={incrementar}>+</button>
-            <button onClick={handleClick} className="buy-btn">Añadir al carrito</button>
+            <ItemCount handle={setQuantity} />
+            {quantity > 0 && (
+              <button onClick={handleAddToCart} className="buy-btn">Añadir al carrito</button>
+            )}
           </div>
         </div>
       </div>
     </section>
   );
-}
-
+};
 
 export default ItemDesc;

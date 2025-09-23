@@ -1,34 +1,45 @@
-export const ProductosList = ({ children }) => {
+import { useState, useEffect } from "react"
+import { collection, getDocs } from "firebase/firestore"
+import { db } from "../firebase"
+import CatalogoContainer from "./CatalogoContainer"
+
+const ProductosContainer = () => {
   const [items, setItems] = useState([])
-  const [error, setError] = useState(null)
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const productosCollection = collection(db, 'productos')
+        const productosCollection = collection(db, "productos")
         const consulta = await getDocs(productosCollection)
-        const productos = consulta.docs.map(doc => ({
+        let productos = consulta.docs.map(doc => ({
           id: doc.id,
           ...doc.data(),
         }))
-        setItems(productos)
-      } catch (error) {
-        setError('Error al cargar productos')
+
+
+        const uniqueProductos = Array.from(
+          new Map(productos.map(p => [p.id, p])).values()
+        )
+
+
+        uniqueProductos.sort((a, b) => (a.id > b.id ? 1 : -1))
+
+        setItems(uniqueProductos)
+      } catch (err) {
+        setError("Error al cargar productos")
       } finally {
         setLoading(false)
       }
     }
     fetchData()
-  }, [])
+  }, []) 
 
-  return (
-    <>
-      {loading && <p>Cargando...</p>}
-      {error && <p>{error}</p>}
-      {!loading && !error && children(items)}
-    </>
-  )
+  if (loading) return <p className="loading">Cargando productos...</p>
+  if (error) return <p className="loading">{error}</p>
+
+  return <CatalogoContainer items={items} />
 }
 
 export default ProductosContainer;

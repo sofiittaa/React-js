@@ -1,8 +1,24 @@
 import Swal from "sweetalert2";
+import { useContext } from "react";
+import { CartCustomProvider, CartContext } from "./CartCustomProvider";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase"; 
+import { useState } from "react";
 
 export const CartWidget = ({ carrito = [] }) => {
+
+    const elValorDelContexto = useContext(CartCustomProvider);
+
+    useContext(CartCustomProvider);
+    
+const [totalQuantity, setTotalQuantity] = useState(0);
+
+
+    const addItemToCart = (quantity) => {
+
+}
+
+
 
     const generarID = () => "ORD-" + Date.now().toString(36).toUpperCase();
 
@@ -13,10 +29,10 @@ export const CartWidget = ({ carrito = [] }) => {
 
         mensaje.rate = 0.1;
     };
-console.log(window.speechSynthesis.getVoices())
+
     const handleClick = () => {
         Swal.fire({
-            title: `Tienes ${carrito.length} productos en el carrito`,
+            title: `Tienes ${carrito.length } productos en tu carrito`,
             icon: 'info',
             confirmButtonText: 'Realizar compra',
             confirmButtonColor: ' rgb(172, 6, 86)',
@@ -78,18 +94,11 @@ console.log(window.speechSynthesis.getVoices())
             }
         });
     };
-
+   
     return (
         <div>
-            <img 
-                onClick={handleClick} 
-                className='carrito' 
-                src="/carrito.png" 
-                alt="Carrito" 
-            />
-            <p className='cantidad'>
-                {carrito.reduce((acc) => acc + 1, 0)}
-            </p>
+            <img onClick={handleClick} className='carrito' src="/carrito.png" alt="Carrito" />
+            <p className='cantidad'>{totalQuantity } </p>
         </div>
     );
 };
