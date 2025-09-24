@@ -1,48 +1,58 @@
+import { createContext, useState } from "react";
+import Swal from "sweetalert2";
 
-import { createContext } from "react"
-export const CartContext = createContext()
-import { useState } from "react"
+export const CartContext = createContext();
 
+export function CartCustomProvider({ children }) {
+  const [Items, setItems] = useState([]);
+  const [totalQuantity, setTotalQuantity] = useState(0);
 
-export function CartCustomProvider(props) {
+  const addItemToCart = (product, quantity) => {
+    // buscar si ya existe el producto en el carrito
+    const existingIndex = Items.findIndex(item => item.id === product.id);
+    let newItems = [...Items];
 
+    if (existingIndex >= 0) {
+      // si existe, sumar la cantidad
+      newItems[existingIndex].cantidad += quantity;
+    } else {
+      // si no existe, agregarlo
+      newItems.push({ ...product, cantidad: quantity });
+    }
 
-    
-const [totalQuantity, setTotalQuantity] = useState(0);
+    setItems(newItems);
 
+    // actualizar cantidad total
+    const total = newItems.reduce((acc, item) => acc + item.cantidad, 0);
+    setTotalQuantity(total);
 
-  const addItemToCart = (quantity) => {
-      const finallQuantity = totalQuantity + quantity
-      setTotalQuantity(finallQuantity )
-  }
-  
+    Swal.fire({
+      title: `Añadiste ${quantity} ${product.title}${quantity > 1 ? "s" : ""} al carrito`,
+      icon: "success",
+      showConfirmButton: false,
+      timer: 2000,
+      background: "url(/fondoSweet.jpg)",
+      backdrop: "rgba(255, 118, 207, 0.17)",
+    });
+  };
+
   const clearCart = () => {
+    setItems([]);
+    setTotalQuantity(0);
+  };
 
-
-  }
-
-    const removeItemFromCart = () => {
-
-}
-
-      const elValorDelContexto = {
-        //guardar el array de productos agregados al carrito y su info 
-        Items: [],
-        //guardar la cantidad de productos agregados al carrito
-        cantidad: 0,
-        //precio total de la compra 
-        totalQuantity: totalQuantity,
-        addItemToCart,
-        removeItemFromCart,
-        clearCart
-}
-
+  const removeItemFromCart = (productId) => {
+    const newItems = Items.filter(item => item.id !== productId);
+    setItems(newItems);
+    const total = newItems.reduce((acc, item) => acc + item.cantidad, 0);
+    setTotalQuantity(total);
+  };
 
   return (
-    <CartContext.Provider value={elValorDelContexto}> 
-        {props.children}
+    <CartContext.Provider value={{ Items, totalQuantity, addItemToCart, removeItemFromCart, clearCart }}>
+      {children}
     </CartContext.Provider>
-  )
+  );
 }
 
 export default CartCustomProvider;
