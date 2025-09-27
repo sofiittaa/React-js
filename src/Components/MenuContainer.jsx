@@ -18,48 +18,33 @@ export const MenuContainer = () => {
       try {
         const tagsCollection = collection(db, "tags");
         const consulta = await getDocs(tagsCollection);
-        // Cada doc tiene { nombre: "tag" }
         const tags = consulta.docs.map(doc => doc.data().nombre);
         setItems(tags);
       } catch (err) {
         console.error(err);
         setError("Error al cargar tags");
       } finally {
-        setLoading(false);
+        setLoading(null);
       }
     };
     fetchData();
   }, []);
 
-
-
-  // 🔹 Filtrado + límite a 15 resultados
   const filteredTags = items
     .filter(t => t.toLowerCase().includes(search.toLowerCase()))
     .slice(0, 13);
 
   return (
     <>
-      <img 
-        onClick={handleClick} 
-        className="mburger" 
-        src="/public/menu-hamburguesa.png" 
-        alt="Menu" 
+      <img  onClick={handleClick} className="mburger"  src="/public/menu-hamburguesa.png" alt="Menu" 
       />
 
       {open && (
         <div className="menu-container">
           <button onClick={handleClose} className="menu-close">X</button>
 
-          <label className="menu-label">
-            Buscar 🔎
-            <input
-              type="text"
-              placeholder="categoría..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="menu-search"
-            />
+          <label className="menu-label">Buscar 🔎
+            <input type="text" placeholder="categoría..."value={search}onChange={(e) => setSearch(e.target.value)} className="menu-search"/>
           </label>
 
           {search && (
@@ -67,12 +52,7 @@ export const MenuContainer = () => {
               {filteredTags.length > 0 ? (
                 filteredTags.map((tag, i) => (
                   <li key={i} className="tag-item" onClick={handleClose}>
-                    <Link
-                      className="tag-link"
-                      to={`/catalogo/${encodeURIComponent(tag.toLowerCase())}`}
-                    >
-                      {tag} {/* aquí los espacios se ven normales */}
-                    </Link>
+                    <Link className="tag-link"to={`/catalogo/${encodeURIComponent(tag.toLowerCase())}`}>{tag}</Link>
                   </li>
                 ))
               ) : (

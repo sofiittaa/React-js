@@ -11,7 +11,7 @@ const ItemDescDetail = ({ item }) => {
     const { addItemToCart } = useContext(CartContext);
 
   const AddItemToCart = () => {
-   addItemToCart(item, cantidad);// <--- agrega el producto al contexto
+   addItemToCart(item, cantidad);
     setCantidad(1);
 
     Swal.fire({

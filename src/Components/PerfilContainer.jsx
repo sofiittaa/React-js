@@ -6,7 +6,7 @@ import { db } from "../firebase";
 export const PerfilContainer = () => {
   const [usuarioActivo, setUsuarioActivo] = useState(null);
 
-  // 🔹 Ver si hay usuario activo en localStorage al cargar
+  
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("usuarioActivo"));
     if (user) setUsuarioActivo(user);
@@ -14,7 +14,7 @@ export const PerfilContainer = () => {
 
   const handleClick = async () => {
     if (usuarioActivo) {
-      // 🔹 Usuario logueado → mostrar opción cerrar sesión
+     
       Swal.fire({
         title: `¡Hola ${usuarioActivo.nombre}!`,
         html: `<p>Iniciaste sesión con el email: ${usuarioActivo.email}</p>`,
@@ -40,7 +40,7 @@ export const PerfilContainer = () => {
         }
       });
     } else {
-      // 🔹 Usuario no logueado → login o registro
+     
       Swal.fire({
         title: 'Bienvenido',
         text: "Inicia sesión o regístrate",
@@ -53,7 +53,7 @@ export const PerfilContainer = () => {
         background: 'url(/fondoSweet.jpg)',
       }).then(async (result) => {
         if (result.isConfirmed) {
-          // 🔹 LOGIN
+
           const loginRes = await Swal.fire({
             title: 'Inicia sesión',
             html: `
@@ -104,7 +104,7 @@ export const PerfilContainer = () => {
           }
 
         } else if (result.isDismissed) {
-          // 🔹 REGISTRO
+          
           const registroRes = await Swal.fire({
             title: 'Regístrate',
             html: `
@@ -126,7 +126,7 @@ export const PerfilContainer = () => {
                 return;
               }
 
-              // revisar en Firebase si ya existe
+             
               const q = query(collection(db, "usuarios"), where("email", "==", email));
               const resultado = await getDocs(q);
               if (!resultado.empty) {

@@ -1,7 +1,7 @@
 
 import { useNavigate } from "react-router-dom";
 
-const ItemCatalogoContainer = ({ items }) => {
+  const ItemCatalogoContainer = ({ items = [] }) => {
   const navigate = useNavigate();
 
   const handleClick = (item) => {

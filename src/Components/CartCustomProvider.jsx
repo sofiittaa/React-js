@@ -7,7 +7,7 @@ export function CartCustomProvider({ children }) {
   const [Items, setItems] = useState([]);
   const [totalQuantity, setTotalQuantity] = useState(0);
 
-  // 🔥 cargar carrito guardado en localStorage al iniciar
+
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cartItems")) || [];
     setItems(storedCart);
@@ -15,7 +15,7 @@ export function CartCustomProvider({ children }) {
     setTotalQuantity(total);
   }, []);
 
-  // 🔥 guardar carrito en localStorage cada vez que cambie
+ 
   useEffect(() => {
     localStorage.setItem("cartItems", JSON.stringify(Items));
   }, [Items]);
@@ -46,27 +46,33 @@ export function CartCustomProvider({ children }) {
         timer: 2000,
         background: "url(/fondoSweet.jpg)",
         backdrop: "rgba(255, 118, 207, 0.17)",
+        customClass: {
+          title: "title",
+          text: "text",
+        }
       });
     }
   };
 
-const decreaseItemFromCart = (productId) => {
-  let newItems = Items.map(item => {
-    if (item.id === productId && item.cantidad > 1) {
-      return { ...item, cantidad: item.cantidad - 1 };
-    }
-    return item;
-  });
+  const decreaseItemFromCart = (productId) => {
+    let newItems = Items.map(item => {
+      if (item.id === productId) {
+        return { ...item, cantidad: item.cantidad - 1 };
+      }
+      return item;
+    }).filter(item => item.cantidad > 0); 
 
-  setItems(newItems);
-  updateTotal(newItems);
+    setItems(newItems);
+     updateTotal(newItems);
+  
+ 
 };
 
 
   const clearCart = () => {
     setItems([]);
     setTotalQuantity(0);
-    localStorage.removeItem("cartItems"); // limpiar storage también
+    localStorage.removeItem("cartItems"); 
   };
 
   const removeItemFromCart = (productId) => {

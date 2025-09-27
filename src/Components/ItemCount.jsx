@@ -15,7 +15,7 @@ export const ItemCount = ({ cantidad, setCantidad, max }) => {
       <button 
         className="btn-dec" 
         onClick={decrementar} 
-        disabled={cantidad <= 1} // deshabilita si está en el mínimo
+        disabled={cantidad <= 1} 
       >
         -
       </button>
@@ -25,7 +25,7 @@ export const ItemCount = ({ cantidad, setCantidad, max }) => {
       <button 
         className="btn-inc" 
         onClick={incrementar} 
-        disabled={cantidad >= max} // deshabilita si llegó al stock
+        disabled={cantidad >= max} 
       >
         +
       </button>

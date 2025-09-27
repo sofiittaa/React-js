@@ -1,4 +1,3 @@
-// ItemListContainer.jsx
 import ProductosContainer from "./ProductosContainer";
 
 const ItemListContainer = () => {

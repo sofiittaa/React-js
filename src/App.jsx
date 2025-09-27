@@ -4,7 +4,7 @@ import FooterContainer from "./Components/FooterContainer";
 import ItemListContainer from "./Components/ItemListContainer";
 import NavbarContainer from "./Components/NavbarContainer";
 import MiLineaContainer from "./Components/MiLineaContainer";
-import ItemCatalogoContainer from "./Components/ItemCatalogoContainer";
+import ProductosContainer from './Components/ProductosContainer';
 import InicioContainer from "./Components/InicioContainer";
 import ItemDescContainer from "./Components/ItemDescContainer";
 import IframeContainer from "./Components/IframeContainer";
@@ -14,8 +14,6 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 /* ------------ FONTS -------------- */
 import "@fontsource/quicksand";
 import "@fontsource/cormorant-garamond";
-
-
 /* ------------- APP --------------- */
 function App() {
  
@@ -29,7 +27,7 @@ function App() {
             <Route exact  element={<BestplayContainer />} />
             <Route exact  element={<MiLineaContainer titulo="Videojuegos populares" />} />
             <Route exact path="/catalogo" element={<ItemListContainer />} />
-            <Route exact path="/catalogo/:tag" element={<ItemCatalogoContainer />} />
+            <Route exact path="/catalogo/:tag" element={<ProductosContainer />} />
         <Route path="/vistaPrev/:id" element={<ItemDescContainer />} />
 
       </Routes>
