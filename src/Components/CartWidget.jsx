@@ -73,13 +73,13 @@ export const CartWidget = () => {
        Swal.fire({
   title: "Ingresa los datos de pago y envío",
   html: `
-    <input id="nombre" className="swal2-input" placeholder="Nombre del titular" required>
-    <input id="tarjeta" className="swal2-input" placeholder="Número de tarjeta" maxlength="16">
-    <input id="vencimiento" className="swal2-input" placeholder="M/Y">
-    <input id="cvv" className="swal2-input" placeholder="CVV" maxlength="3">
-    <input id="direccion" className="swal2-input" placeholder="Número de puerta">
-    <input id="calles" className="swal2-input" placeholder="Calles">
-    <input id="persona" className="swal2-input" placeholder="Nombre de quien recibe">
+    <input id="nombre" class="swal2-input" placeholder="Nombre del titular" required>
+    <input id="tarjeta" class="swal2-input" placeholder="Número de tarjeta" maxlength="16">
+    <input id="vencimiento" class="swal2-input" placeholder="Vencimiento M/Y">
+    <input id="cvv" class="swal2-input" placeholder="CVV" maxlength="3">
+    <input id="direccion" class="swal2-input" placeholder="Número de puerta">
+    <input id="calles" class="swal2-input" placeholder="Calles">
+    <input id="persona" class="swal2-input" placeholder="Receptor">
   `,
   icon: "success",
   confirmButtonText: "Comprar",
